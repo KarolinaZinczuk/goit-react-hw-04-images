@@ -56,7 +56,7 @@ export const App = () => {
             `We're sorry, but you've reached the end of search results.`
           );
         }
-        setImages(...images, ...pictures);
+        setImages(images => [...images, ...pictures]);
         setTotalImg(images.totalHits);
       })
       .catch(error => setError(error))
